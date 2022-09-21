@@ -1,5 +1,5 @@
 #include <iostream>
-#include <math.h>       
+    
 
 int main(int argc, char *argv[]){
     int A = 0, B = 0, SOMA = 0;

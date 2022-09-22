@@ -10,6 +10,8 @@ done
 touch $1/main.cpp
 
 echo "#include <iostream>" > $1/main.cpp
+echo "using namespace std;" >> $1/main.cpp
+echo "" >> $1/main.cpp
 echo "int main(int argc, char *argv[]){" >> $1/main.cpp
 echo "}" >> $1/main.cpp
 

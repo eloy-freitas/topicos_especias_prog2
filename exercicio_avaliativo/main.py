@@ -35,19 +35,18 @@ if __name__ == '__main__':
                         fila.append(j)
                 cor_atual = 1 if cor_atual == 0 else 0
                     
-            
-            result = True
+            isBipartido = True
             
             #verifica se o grafo é bipartido
             for i in range(size):
                 for j in range(size):
                     if alunos[i][j] == 1 and cores[j] == cores[i]:
-                        result = False
+                        isBipartido = False
                         break
-                if not result:
+                if not isBipartido:
                     break
-
-            print("SIM" if result else "NAO")
+                
+            print("SIM" if isBipartido else "NAO")
         else:
             break
     

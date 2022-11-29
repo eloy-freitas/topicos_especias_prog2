@@ -26,31 +26,29 @@ if __name__ == '__main__':
             fila.append(0)
             cor_atual = 0
 
+            # busca em largura
             while len(fila) != 0:
                 i = fila.pop()
                 for j in range(size):
-                    if alunos[i][j] != -1 and cores[j] == -1:
+                    if alunos[i][j] == 1 and cores[j] == -1:
                         cores[j] = cor_atual
-                        cor_atual = 1 if cor_atual == 0 else 0
                         fila.append(j)
+                cor_atual = 1 if cor_atual == 0 else 0
+                    
             
             result = True
-            fila.append(0)
-
-            while result and len(fila) != 0:
-                i = fila.pop()
+            
+            #verifica se o grafo é bipartido
+            for i in range(size):
                 for j in range(size):
                     if alunos[i][j] == 1 and cores[j] == cores[i]:
                         result = False
                         break
-                    fila.append(j)
+                if not result:
+                    break
 
             print("SIM" if result else "NAO")
-            [print(x) for x in alunos]
-            print("")
-            print(cores)
-            print("")
-        break
-    
+        else:
+            break
     
 

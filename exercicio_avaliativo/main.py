@@ -1,13 +1,8 @@
 def create_matrix(rowCount):
-    mat = []
-    for i in range(rowCount):
-        rowList = []
-        for j in range(rowCount):
-            rowList.append(-1)
-        mat.append(rowList)
-
-    return mat
-
+    mat = [
+        [0 for _ in range(rowCount)] 
+        for _ in range(rowCount)
+    ]
 
 if __name__ == '__main__':
     fila = []

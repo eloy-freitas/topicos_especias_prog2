@@ -4,6 +4,9 @@ def create_matrix(rowCount):
         for _ in range(rowCount)
     ]
 
+    return mat
+
+
 if __name__ == '__main__':
     fila = []
     
